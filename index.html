@@ -16,59 +16,100 @@
                 Dashboard
             </a>
 
-            <div class="sb-utility-wrapper sb-span-2">
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/glyph-neue/64/FFFFFF/home--v1.png" alt="home--v1"/>
-                    Home
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/fluency-systems-filled/64/FFFFFF/name.png" alt="name"/>
-                    Profile
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/sf-regular-filled/64/FFFFFF/message-group.png" alt="message-group"/>
-                    Messages
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/sf-regular-filled/64/FFFFFF/time-machine.png" alt="time-machine"/>
-                    History
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/sf-black/64/FFFFFF/list.png" alt="list"/>
-                    Tasks
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/glyph-neue/64/FFFFFF/group--v1.png" alt="group--v1"/>
-                    Communities
-                </a>
-            </div>
-            <div class="sb-utility-wrapper">
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/sf-black-filled/64/FFFFFF/support.png" alt="support"/>
-                    Settings
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/ios-glyphs/64/FFFFFF/ask-question.png" alt="ask-question"/>
-                    Support
-                </a>
-                <a class="sb-logo-wrapper sb-utility" href="./#">
-                    <img src="https://img.icons8.com/ios-glyphs/64/FFFFFF/keyhole-shield.png" alt="keyhole-shield"/>
-                    Privacy
-                </a>
-            </div>
+            <ul class="sb-utility-wrapper sb-span-2">
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/glyph-neue/64/FFFFFF/home--v1.png" alt="home--v1"/>
+                        Home
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/fluency-systems-filled/64/FFFFFF/name.png" alt="name"/>
+                        Profile
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/sf-regular-filled/64/FFFFFF/message-group.png" alt="message-group"/>
+                        Messages
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/sf-regular-filled/64/FFFFFF/time-machine.png" alt="time-machine"/>
+                        History
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/sf-black/64/FFFFFF/list.png" alt="list"/>
+                        Tasks
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/glyph-neue/64/FFFFFF/group--v1.png" alt="group--v1"/>
+                        Communities
+                    </a>
+                </li>
+            </ul>
+            <ul class="sb-utility-wrapper">
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/sf-black-filled/64/FFFFFF/support.png" alt="support"/>
+                        Settings
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/ios-glyphs/64/FFFFFF/ask-question.png" alt="ask-question"/>
+                        Support
+                    </a>
+                </li>
+                <li class="sb-logo-wrapper sb-utility">
+                    <a href="./#">
+                        <img src="https://img.icons8.com/ios-glyphs/64/FFFFFF/keyhole-shield.png" alt="keyhole-shield"/>
+                        Privacy
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="dashboard-container">
             <div class="header-container">
-                <button class="hd-search-btn"></button>
-                <input type="search" name="search_query" id="search-query">
-                <button class="hd-notification-btn"></button>
-                <div class="hd-user-wrapper">
-                    <!-- <img src="" alt=""> -->
-                    <!-- <p>Name Here</p> -->
+                <div class="hd-uprow-wrapper">
+                    <div class="hd-searchbox">
+                        <img src="https://img.icons8.com/ios-filled/50/1A1A1A/search--v1.png" alt="search--v1"/>
+                        <input type="search" name="search_query" id="search-query"
+                            autocomplete="off"
+                            inputmode="search"
+                            placeholder="Enter a search query"
+                        />
+                    </div>
+                    <div class="hd-user-profile">
+                        <button class="hd-notification-btn">
+                            <img src="https://img.icons8.com/fluency-systems-filled/50/1A1A1A/appointment-reminders.png" alt="appointment-reminders"/>
+                        </button>
+
+                        <div class="hd-photo-wrapper">
+                            <img src="./assets/img/mostinesie.png" alt="">
+                        </div>
+                        <p>Mostinessie</p>
+                    </div>
+                </div>
+                <div class="hd-bottomrow-wrapper">
+                    <div class="greetings-wrapper">
+                        
+                    </div>
+                    <div class="action-wrapper"><a href="./#">New</a></div>
+                    <div class="action-wrapper"><a href="./#">Upload</a></div>
+                    <div class="action-wrapper"><a href="./#">Share</a></div>
                 </div>
             </div>
-            <div class="content-container"></div>
+            <div class="content-container">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis eveniet soluta repudiandae exercitationem. Dolorem accusamus aliquam impedit nesciunt, sit corrupti facilis esse recusandae ipsa error a itaque praesentium possimus quia?
+            </div>
         </div>
     </main>
 

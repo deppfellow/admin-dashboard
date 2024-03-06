@@ -6,6 +6,10 @@
 
 :root {
     /* VARIABLE DECLARATION */
+    --dark-gray: rgb(90, 90, 90);
+    --light-gray: rgb(148, 148, 148);
+    --focus-blue: rgb(69, 159, 189);
+
     /* Sidebar variables */
     --sb-main-bg-color: #523A28;
     --sb-main-font-color: #fff;
@@ -16,9 +20,12 @@
     --sb-util-bg-hover-color: #A47551;
     --sb-util-img-size: 30px;
     --sb-util-font-size: 1.2rem;
+    --sb-util-font-color: #fff;
 
     /* Dashboard variables */
-    --hd-main-bg-color: #f5f5f5;
+    --db-main-bg-color: #e2e8f0;
+
+    --hd-main-bg-color: #fff;
 }
 
 main {
@@ -29,6 +36,9 @@ main {
     grid-template-columns: minmax(200px, 270px) auto;
 }
 
+
+/* Start of sidebar styling */
+
 .sidebar-container {
     background-color: var(--sb-main-bg-color);
     color: var(--sb-main-font-color);
@@ -38,4 +48,158 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--sb-main-font-color);
+    font-size: var(--sb-title-font-size);
+    text-decoration: none;
+    margin: 1.3rem auto;
 }
+
+.sb-title-logo img {
+    margin-right: 1rem;
+}
+
+.sb-span-2 {
+    margin-bottom: 40px;
+}
+
+.sb-utility-wrapper .sb-utility a  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--sb-util-font-color);
+    font-size: var(--sb-util-font-size);
+    padding: 8px 0;
+}
+
+.sb-utility-wrapper .sb-utility a:hover {
+    background-color: var(--sb-util-bg-hover-color);
+}
+
+.sb-utility-wrapper .sb-utility img {
+    width: var(--sb-util-img-size);
+    height: var(--sb-util-img-size);
+    margin: 0 1rem;
+}
+
+/* End of sidebar styling */
+/* Start of Dashboard styling */
+
+.dashboard-container {
+    display: grid;
+    grid-template-rows: 120px auto;
+    background-color: var(--db-main-bg-color);
+}
+
+.header-container {
+    background-color: var(--hd-main-bg-color);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 2rem;
+}
+
+.header-container .hd-uprow-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* margin: 0 2rem; */
+}
+
+.hd-uprow-wrapper .hd-searchbox {
+    --target-size: 32px;
+    --border-width: 2px;
+    
+    /* Input box variables */
+    --box-height: var(--target-size);
+    --border-radius: calc( var(--box-height) / 2 );
+
+    /* Img variables */
+    --icon-size: calc( var(--box-height) * 3/4 );
+
+    /* Gap variables */
+    --side-margin: calc( var(--border-radius) / 2 );
+    --icon-vertical-margin: calc( (var(--box-height) - var(--icon-size)) / 2 );
+
+    display: flex;
+    flex: 1 2 auto;
+    position: relative;
+    min-width: 208px;
+    height: var(--box-height);
+    margin-right: 80px;
+}
+
+.hd-uprow-wrapper .hd-searchbox img {
+    position: absolute;
+    left: var(--side-margin);
+    top: var(--icon-vertical-margin);
+    bottom: var(--icon-vertical-margin);
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.hd-uprow-wrapper .hd-searchbox input[type="search"] {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--dark-gray);
+    width: 100%;
+    height: 100%;
+
+    padding-left: calc( var(--side-margin) + var(--icon-size) + 4px );
+    padding-right: var(--side-margin);
+}
+
+.hd-uprow-wrapper .hd-searchbox input[type="search"]::placeholder {
+    color: var(--light-gray);
+    opacity: 1;
+}
+
+.hd-uprow-wrapper .hd-searchbox input[type="search"]:focus {
+    border-color: var(--focus-blue);
+    box-shadow: 0px 0px 5px var(--focus-blue);
+    outline: 1px solid transparent;
+}
+
+.hd-uprow-wrapper .hd-user-profile {
+    --target-size: 32px;
+
+    --ideal-img-size: 48px;
+    --min-img-size: var(--target-size);
+
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hd-uprow-wrapper .hd-user-profile .hd-notification-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.hd-uprow-wrapper .hd-user-profile .hd-notification-btn img {
+    width: var(--min-img-size);
+    height: var(--min-img-size);
+}
+
+.hd-uprow-wrapper .hd-user-profile .hd-photo-wrapper {
+    width: var(--ideal-img-size);
+    height: var(--ideal-img-size);
+    min-width: var(--min-img-size);
+    min-height: var(--min-img-size);
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.hd-uprow-wrapper .hd-user-profile .hd-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hd-bottomrow-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------------------------- */
